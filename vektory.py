@@ -20,12 +20,16 @@ else:
 img = Image.new('RGB', (250, 250), 'white')
 pixels = img.load()
 
-for i in range(small_vector):
+count = sum(vector)
+
+while count > 0:
     for x in range(abs(k[0])):
         pixels[a[0], a[1]] = (0, 0, 0)
         a[0] += x_vector//abs(x_vector)
+        count -= 1
     for y in range(abs(k[1])):
         pixels[a[0], a[1]] = (0, 0, 0)
         a[1] += y_vector//abs(y_vector)
+        count -= 1
 
 img.show()
